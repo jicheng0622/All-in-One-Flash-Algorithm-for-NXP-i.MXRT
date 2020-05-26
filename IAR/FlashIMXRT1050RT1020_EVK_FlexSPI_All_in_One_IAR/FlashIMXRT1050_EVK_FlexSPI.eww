@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\FlashIMXRT1050_EVK_FlexSPI.ewp</path>
+  </project>
+  <batchBuild>
+    <batchDefinition>
+      <name>All</name>
+      <member>
+        <project>FlashIMXRT1050_EVK_FlexSPI</project>
+        <configuration>FlashIMXRT1050_EVK_FlexSPI</configuration>
+      </member>
+    </batchDefinition>
+  </batchBuild>
+</workspace>
+
+

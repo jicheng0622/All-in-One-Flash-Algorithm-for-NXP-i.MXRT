@@ -1,0 +1,17 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\bin\armJET.dll" 
+
+"C:\E_Disk_Work\NXP\MCU\i.MXRT\Tools\IAR_Keil_FlashAlgorithm\FlashIMXRT1050RT1020_EVK_FlexSPI_All_in_One\FlashIMXRT1050_EVK_FlexSPI\Exe\FlashIMXRT1050_EVK_FlexSPI.out" 
+
+--plugin="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\bin\armbat.dll" 
+
+--device_macro="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\config\debugger\NXP\iMXRT.dmac" 
+
+--device_macro="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\config\debugger\NXP\iMXRT_Trace.dmac" 
+
+--macro="C:\E_Disk_Work\NXP\MCU\i.MXRT\Tools\IAR_Keil_FlashAlgorithm\FlashIMXRT1050RT1020_EVK_FlexSPI_All_in_One\FlashIMXRT1050_EVK_FlexSPI.mac" 
+
+
+
+
