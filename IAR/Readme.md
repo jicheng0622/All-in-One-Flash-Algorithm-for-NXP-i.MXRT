@@ -1,14 +1,12 @@
 # All in One i.MXRT1050/RT1020 SPI Flash Algorithm for IAR
 
-​        外部SPI Flash的在线调试烧写问题自打i.MXRT发布以来就一直相伴而生（没办法啊，谁让它自打娘胎里出生就不带内置Flash呢），期间很多RT用户在抱怨外部SPI Flash烧写的兼容性问题和稳定性问题，作者我本人更是历经千锤百炼软磨硬泡方才求得真经，练就一身好脾气，咳咳，现在回过头来，一声感叹，一切皆是浮云遮住了望眼，拨云见日之后会发现，so easy~妈妈再也不用担心我没事乱拍桌子了。。。
+    RT1050/RT1020的SPI Flash烧写算法一直以来都是各自为政，不同的IDE（IAR，Keil和MCUXpresso），不同的调试工具（J-Flash）都是维护自己的一套Flash烧写算法，再加上一些NXP第三方partner（比如野火，正点原子，周立功）也会针对自己的开发板适配板载QSPI Flash的算法，毕竟NXP官方没给出一个统一的烧写算法，大家只能是怎么方便怎么来了。好在自打i.MXRT1060以后的产品，其芯片自带的ROM里包含了一套完整的Flash操作API，而且IAR最新版本里针对RT1060以及以后的产品都是使用这个标准统一的API来操作外部SPI Flash（代码不可见，只开放API供调用）。不过“后浪”的确弥补了这个缺憾，那“前浪”咋办，不能就晾在沙滩上吧？？虽然作为已经量产很久的RT1050/RT1020，它的ROM不可能后面再加上去这套API了，但是NXP虽然关上了一道门却敞开了一扇窗，在RT1050/RT1020的SDK软件包里实际上是包含了这套统一SPI Flash操作的API源码的（\boards\evkbimxrt1050\bootloader_examples\flashloader），这套源码很庞大，包含了UART/USB通信以及SD卡/eMMC/SPI Nand/SPI Nor等其他Memory的操作，我花了不少时间，踏坑无数之后，方摘出来最精简的代码来实现IAR下真正的All in One Flash烧写算法，并规避修正了一些之前遇到过的IAR调试出现的莫名其妙的问题，希望能就此终结i.MXRT SPI Flash在IAR下调试仿真的问题，让大家自由的在RT产品中放飞自我，哈哈。
 
-​        闲嗑不唠了，回来正题。RT1050/RT1020的SPI Flash烧写算法一直以来都是各自为政，不同的IDE（IAR，Keil和MCUXpresso），不同的调试工具（J-Flash）都是维护自己的一套Flash烧写算法，再加上一些NXP第三方partner（比如野火，正点原子，周立功）也会针对自己的开发板适配板载QSPI Flash的算法，毕竟NXP官方没给出一个统一的烧写算法，大家只能是怎么方便怎么来了。好在自打i.MXRT1060以后的产品，其芯片自带的ROM里包含了一套完整的Flash操作API，而且IAR最新版本里针对RT1060以及以后的产品都是使用这个标准统一的API来操作外部SPI Flash（代码不可见，只开放API供调用）。不过“后浪”的确弥补了这个缺憾，那“前浪”咋办，不能就晾在沙滩上吧？？虽然作为已经量产很久的RT1050/RT1020，它的ROM不可能后面再加上去这套API了，但是NXP虽然关上了一道门却敞开了一扇窗，在RT1050/RT1020的SDK软件包里实际上是包含了这套统一SPI Flash操作的API源码的（\boards\evkbimxrt1050\bootloader_examples\flashloader），这套源码很庞大，包含了UART/USB通信以及SD卡/eMMC/SPI Nand/SPI Nor等其他Memory的操作，我花了不少时间，踏坑无数之后，方摘出来最精简的代码来实现IAR下真正的All in One Flash烧写算法，并规避修正了一些之前遇到过的IAR调试出现的莫名其妙的问题，希望能就此终结i.MXRT SPI Flash在IAR下调试仿真的问题，让大家自由的在RT产品中放飞自我，哈哈。
-
-​        至于大家关心的Keil下的Flash算法，我实际上之前开源过一个版本并放到我的博客里，不过后面测试还是有些不稳定的，待该最新版算法测试稳定之后，我会更新到Keil下，请大家关注我之前的那篇Keil算法博客更新。下面让我们看看，这套算法怎么使用吧：
+    至于大家关心的Keil下的Flash算法，我实际上之前开源过一个版本并放到我的博客里，不过后面测试还是有些不稳定的，待该最新版算法测试稳定之后，我会更新到Keil下，请大家关注我之前的那篇Keil算法博客更新。下面让我们看看，这套算法怎么使用吧：
 
 （1）首先该算法工程支持RT1050, RT1020和RT1060（RT1060 IAR官方给的是调用ROM API的方式，我这里是给出SDK里的源码，不保证完全一样哈，只能说是用法一致）如下图，选择不同的工程配置之后，重新编译链接以生成不同的Flash烧写算法可执行文件.out；
 
-<img src="C:\E_Disk_Work\NXP\MCU\i.MXRT\Tools\IAR_Keil_FlashAlgorithm\Readme\image-20200526151842649.png" alt="image-20200526151842649" style="zoom: 67%;" />
+<img src="https://github.com/jicheng0622/All-in-One-Flash-Algorithm-for-RT1050-RT1020/blob/master/IAR/Figures/image-20200526151842649.png" alt="image-20200526151842649.png" style="zoom: 67%;" />
 
 （2）将上一步生成的.out文件以及本工程目录下对应芯片的.flash文件（以RT1050为例，FlashIMXRT1050_EVK_FlexSPI.out和FlashIMXRT1050_EVK_FlexSPI.flash这两个文件）拷贝到IAR的安装目录下（以我电脑路径为例，C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\config\flashloader\NXP），覆盖源文件即可。这里可能会有疑问，只拷贝.out文件不就行吗，它是真正的Flashloader可执行文件，为什么还要拷贝.flash文件呢。IAR自带的.flash文件里会要求下载时先加载.mac脚本文件以初始化MCU的时钟以及管脚复用等操作，但是我修改后的flash烧写算法已经把时钟初始化和管脚配置都放在.out文件里了，这样就没必要再加载.mac初始化脚本了，所以新的.flash文件我去掉了预加载.mac文件的步骤；
 
