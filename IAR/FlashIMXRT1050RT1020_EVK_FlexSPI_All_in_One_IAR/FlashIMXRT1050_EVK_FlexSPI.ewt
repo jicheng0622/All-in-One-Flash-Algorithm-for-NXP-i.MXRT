@@ -3559,10 +3559,10 @@
     <group>
         <name>Framework</name>
         <file>
-            <name>$EW_DIR$\arm\src\flashloader\framework2\flash_loader.c</name>
+            <name>$PROJ_DIR$\framework\flash_loader.c</name>
         </file>
         <file>
-            <name>$EW_DIR$\arm\src\flashloader\framework2\flash_loader_asm.s</name>
+            <name>$PROJ_DIR$\framework\flash_loader_asm.s</name>
         </file>
     </group>
     <file>

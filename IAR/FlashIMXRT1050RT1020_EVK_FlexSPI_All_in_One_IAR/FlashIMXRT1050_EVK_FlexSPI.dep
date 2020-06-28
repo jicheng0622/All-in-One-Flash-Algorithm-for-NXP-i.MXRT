@@ -1,346 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>1133334127</fileChecksum>
+    <fileChecksum>2893247326</fileChecksum>
     <configuration>
         <name>FlashIMXRT1020_EVK_FlexSPI</name>
         <outputs>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\fsl_common.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\flash_loader_asm.o</file>
-            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader_asm.s</file>
-            <file>$PROJ_DIR$\Sources\fsl_common.c</file>
-            <file>$PROJ_DIR$\Sources\fsl_flexspi.c</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\clock_config_MIMXRT.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\clock_config_MIMXRT.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\flash_loader.o</file>
-            <file>$PROJ_DIR$\Sources\flexspi_nor_flash.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI.c</file>
-            <file>$PROJ_DIR$\Sources\fsl_flexspi.h</file>
-            <file>$PROJ_DIR$\Sources\clock_config_MIMXRT.c</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\hardware_init_MIMXRT.xcl</file>
-            <file>$PROJ_DIR$\Sources\flexspi_nor_flash.c</file>
-            <file>$PROJ_DIR$\Sources\hardware_init_MIMXRT.c</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\fsl_common.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\fsl_flexspi.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\flexspi_nor_flash.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.pbd</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Exe\FlashIMXRT1020_EVK_FlexSPI.out</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\flexspi_nor_flash.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\fsl_flexspi.o</file>
-            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader.c</file>
-            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\hardware_init_MIMXRT.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
-            <file>$PROJ_DIR$\Sources\device.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
-            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-            <file>$PROJ_DIR$\devices\fsl_device_registers.h</file>
-            <file>$TOOLKIT_DIR$\lib\m7M_tlv.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ctype.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-            <file>$PROJ_DIR$\CMSIS\Include\core_cm7.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
-            <file>$PROJ_DIR$\CMSIS\Include\cmsis_compiler.h</file>
-            <file>$PROJ_DIR$\CMSIS\Include\cmsis_version.h</file>
-            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader.h</file>
-            <file>$PROJ_DIR$\flash_config.h</file>
-            <file>$PROJ_DIR$\Sources\fusemap.h</file>
-            <file>$PROJ_DIR$\Sources\fsl_common.h</file>
-            <file>$PROJ_DIR$\CMSIS\Include\mpu_armv7.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
-            <file>$PROJ_DIR$\Sources\target_config.h</file>
-            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Sources\fusemap.h</file>
+            <file>$PROJ_DIR$\devices\fsl_device_registers.h</file>
             <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\flash_loader.xcl</file>
+            <file>$PROJ_DIR$\flash_config.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\CMSIS\Include\cmsis_compiler.h</file>
             <file>$TOOLKIT_DIR$\inc\c\iar_intrinsics_common.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
             <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader_extra.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$PROJ_DIR$\CMSIS\Include\cmsis_version.h</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\Sources\device.h</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tlv.a</file>
+            <file>$PROJ_DIR$\CMSIS\Include\core_cm7.h</file>
+            <file>$PROJ_DIR$\Sources\target_config.h</file>
+            <file>$PROJ_DIR$\CMSIS\Include\mpu_armv7.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$PROJ_DIR$\Sources\fsl_common.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ctype.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\devices\MIMXRT1021\MIMXRT1021_features.h</file>
             <file>$PROJ_DIR$\devices\MIMXRT1021\fsl_clock.h</file>
+            <file>$PROJ_DIR$\devices\MIMXRT1021\peripherals_pinmux.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader_asm.s</file>
             <file>$PROJ_DIR$\FlashIMXRT1020_OCRAM.icf</file>
             <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\List\FlashIMXRT1020_EVK_FlexSPI.map</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader.c</file>
             <file>$PROJ_DIR$\devices\MIMXRT1021\MIMXRT1021.h</file>
-            <file>$PROJ_DIR$\devices\MIMXRT1021\peripherals_pinmux.h</file>
-            <file>$PROJ_DIR$\devices\MIMXRT1021\MIMXRT1021_features.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader_extra.h</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\hardware_init_MIMXRT.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.pbd</file>
+            <file>$PROJ_DIR$\Sources\fsl_common.c</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\clock_config_MIMXRT.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\Sources\fsl_flexspi.c</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\flash_loader.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Exe\FlashIMXRT1020_EVK_FlexSPI.out</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI.c</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\fsl_common.xcl</file>
+            <file>$PROJ_DIR$\Sources\flexspi_nor_flash.c</file>
+            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader_asm.s</file>
+            <file>$PROJ_DIR$\Sources\clock_config_MIMXRT.c</file>
+            <file>$PROJ_DIR$\Sources\flexspi_nor_flash.h</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\fsl_flexspi.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\flexspi_nor_flash.o</file>
+            <file>$PROJ_DIR$\Sources\fsl_flexspi.h</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\fsl_flexspi.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\flexspi_nor_flash.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\hardware_init_MIMXRT.xcl</file>
+            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader.c</file>
+            <file>$PROJ_DIR$\Sources\hardware_init_MIMXRT.c</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\flash_loader_asm.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\clock_config_MIMXRT.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Obj\fsl_common.o</file>
+            <file>$PROJ_DIR$\framework\flash_loader_extra.h</file>
+            <file>$PROJ_DIR$\framework\flash_loader.h</file>
+            <file>$PROJ_DIR$\framework\flash_loader_asm.s</file>
+            <file>$PROJ_DIR$\framework\flash_loader.c</file>
         </outputs>
-        <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 20 64</file>
-                </tool>
-            </outputs>
-        </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader_asm.s</name>
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 2</file>
+                    <file> 65</file>
                 </tool>
             </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Sources\fsl_common.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 0</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 16</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 48 29 56 35 50 42 39 30 32 55 41 38 26 51 37 33 65 40 44 43 59 27 49 67 62</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Sources\fsl_flexspi.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 23</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 17</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 11 48 29 56 35 50 42 39 30 32 55 41 38 26 51 37 33 65 40 44 43 59 27 49 67 62</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 1</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 21</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 54 27 35 50 42 39 58 36 56 61 41 26 51 55 38 32 45 46 60 28 33 65 40 44 43 59 49 67 9 48 29 30 37 62 11</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Sources\clock_config_MIMXRT.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 7</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 6</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 33 65 40 32 56 35 50 42 39 44 43 59 27 49 67 11 48 29 30 55 41 38 26 51 37 62 47 52</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Sources\flexspi_nor_flash.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 22</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 18</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 55 56 35 50 42 39 41 38 26 51 30 11 48 29 32 37 33 65 40 44 43 59 27 49 67 62 9</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Sources\hardware_init_MIMXRT.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 25</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 13</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 33 65 40 32 56 35 50 42 39 44 43 59 27 49 67 29 11 48 30 55 41 38 26 51 37 62 9 47 66</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Exe\FlashIMXRT1020_EVK_FlexSPI.out</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 64</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 63 7 8 2 1 22 0 23 25 53 34 31</file>
-                </tool>
-            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 8</file>
+                    <file> 48</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 57</file>
+                    <file> 3</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 45 46 32 56 35 50 42 39 60</file>
+                    <file> 17 4 26 29 13 6 16 15 41</file>
                 </tool>
             </inputs>
         </file>
-    </configuration>
-    <configuration>
-        <name>FlashIMXRT1050_EVK_FlexSPI</name>
-        <outputs>
-            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader_asm.s</file>
-            <file>$PROJ_DIR$\Sources\fsl_common.c</file>
-            <file>$PROJ_DIR$\Sources\fsl_flexspi.c</file>
-            <file>$PROJ_DIR$\Sources\flexspi_nor_flash.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI.c</file>
-            <file>$PROJ_DIR$\Sources\fsl_flexspi.h</file>
-            <file>$PROJ_DIR$\Sources\clock_config_MIMXRT.c</file>
-            <file>$PROJ_DIR$\Sources\flexspi_nor_flash.c</file>
-            <file>$PROJ_DIR$\Sources\hardware_init_MIMXRT.c</file>
-            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader.c</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.__cstat.et</file>
-            <file>$PROJ_DIR$\devices\MIMXRT1050\peripherals_pinmux.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flash_loader.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\List\FlashIMXRT1050_EVK_FlexSPI.map</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\fsl_common.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\fsl_flexspi.__cstat.et</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\fsl_common.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.xcl</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
-            <file>$PROJ_DIR$\Sources\device.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\clock_config_MIMXRT.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\hardware_init_MIMXRT.__cstat.et</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flexspi_nor_flash.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-            <file>$PROJ_DIR$\devices\fsl_device_registers.h</file>
-            <file>$TOOLKIT_DIR$\lib\m7M_tlv.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ctype.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\fsl_common.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\clock_config_MIMXRT.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-            <file>$PROJ_DIR$\CMSIS\Include\core_cm7.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
-            <file>$PROJ_DIR$\CMSIS\Include\cmsis_compiler.h</file>
-            <file>$PROJ_DIR$\CMSIS\Include\cmsis_version.h</file>
-            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader.h</file>
-            <file>$PROJ_DIR$\flash_config.h</file>
-            <file>$PROJ_DIR$\devices\MIMXRT1050\MIMXRT1052_features.h</file>
-            <file>$PROJ_DIR$\Sources\fusemap.h</file>
-            <file>$PROJ_DIR$\Sources\fsl_common.h</file>
-            <file>$PROJ_DIR$\CMSIS\Include\mpu_armv7.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flash_loader.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flexspi_nor_flash.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\microseconds_sysclk.__cstat.et</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flash_loader.__cstat.et</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flash_loader_asm.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
-            <file>$PROJ_DIR$\devices\MIMXRT1050\MIMXRT1052.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\fsl_flexspi.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\microseconds_sysclk.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\microseconds_sysclk.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\hardware_init_MIMXRT.o</file>
-            <file>$PROJ_DIR$\devices\MIMXRT1050\fsl_clock.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flexspi_nor_flash.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\fsl_flexspi.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_OCRAM.icf</file>
-            <file>$PROJ_DIR$\Sources\target_config.h</file>
-            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-            <file>$PROJ_DIR$\Sources\microseconds_sysclk.c</file>
-            <file>$PROJ_DIR$\Sources\microseconds.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\iar_intrinsics_common.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Exe\FlashIMXRT1050_EVK_FlexSPI.out</file>
-            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\clock_config_MIMXRT.xcl</file>
-            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader_extra.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\hardware_init_MIMXRT.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.pbd</file>
-        </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 74 13</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader_asm.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 54</file>
+                    <file> 49 37</file>
                 </tool>
             </outputs>
         </file>
@@ -349,103 +122,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 14</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 32</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 16</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 46 21 72 30 48 39 36 22 27 69 38 34 18 49 33 28 56 37 41 40 75 19 47 44 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Sources\fsl_flexspi.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 57</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 15</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 63</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 5 46 21 72 30 48 39 36 22 27 69 38 34 18 49 33 28 56 37 41 40 75 19 47 44 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 64</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 10</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 17</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 68 19 30 48 39 36 73 31 72 78 38 18 49 69 34 27 42 43 77 20 28 56 37 41 40 75 47 44 3 46 21 22 33 61 5</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Sources\clock_config_MIMXRT.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 23</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 35</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 76</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 28 56 37 27 72 30 48 39 36 41 40 75 19 47 44 5 46 21 22 69 38 34 18 49 33 61 45 66</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Sources\flexspi_nor_flash.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 62</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 25</file>
+                    <file> 69</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -455,205 +132,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 69 72 30 48 39 36 38 34 18 49 22 5 46 21 27 33 28 56 37 41 40 75 19 47 44 61 3</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Sources\hardware_init_MIMXRT.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 60</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 24</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 79</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 28 56 37 27 72 30 48 39 36 41 40 75 19 47 44 21 5 46 22 69 38 34 18 49 33 61 3 45 11</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 50</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 53</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 12</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 42 43 27 72 30 48 39 36 77</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Sources\microseconds_sysclk.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 58</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 52</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 59</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 71 78 72 30 48 39 36 38 22 28 56 37 27 41 40 75 19 47 44 55</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Exe\FlashIMXRT1050_EVK_FlexSPI.out</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 13</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 65 23 50 54 64 62 14 57 60 67 29 26</file>
-                </tool>
-            </inputs>
-        </file>
-    </configuration>
-    <configuration>
-        <name>FlashIMXRT1060_FlexSPI</name>
-        <outputs>
-            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader_asm.s</file>
-            <file>$PROJ_DIR$\Sources\fsl_common.c</file>
-            <file>$PROJ_DIR$\Sources\fsl_flexspi.c</file>
-            <file>$PROJ_DIR$\Sources\flexspi_nor_flash.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI.c</file>
-            <file>$PROJ_DIR$\Sources\fsl_flexspi.h</file>
-            <file>$PROJ_DIR$\Sources\clock_config_MIMXRT.c</file>
-            <file>$PROJ_DIR$\Sources\flexspi_nor_flash.c</file>
-            <file>$PROJ_DIR$\Sources\hardware_init_MIMXRT.c</file>
-            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader.c</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\List\FlashIMXRT1060_FlexSPI.map</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\fsl_flexspi.o</file>
-            <file>$PROJ_DIR$\devices\MIMXRT1060\fsl_clock.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1050_RAM512K.icf</file>
-            <file>$PROJ_DIR$\devices\MIMXRT1060\MIMXRT1062.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\microseconds_sysclk.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\flexspi_nor_flash.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\flexspi_nor_flash.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\clock_config_MIMXRT.o</file>
-            <file>$PROJ_DIR$\devices\MIMXRT1060\MIMXRT1062_features.h</file>
-            <file>$PROJ_DIR$\devices\MIMXRT1060\peripherals_pinmux.h</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\clock_config_MIMXRT.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\flash_loader.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\fsl_common.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\flash_loader.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\flash_loader_asm.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\fsl_flexspi.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\microseconds_sysclk.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\hardware_init_MIMXRT.o</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\hardware_init_MIMXRT.xcl</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Exe\FlashIMXRT1060_FlexSPI.out</file>
-            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\fsl_common.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
-            <file>$PROJ_DIR$\Sources\device.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
-            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-            <file>$PROJ_DIR$\devices\fsl_device_registers.h</file>
-            <file>$TOOLKIT_DIR$\lib\m7M_tlv.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ctype.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-            <file>$PROJ_DIR$\CMSIS\Include\core_cm7.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
-            <file>$PROJ_DIR$\CMSIS\Include\cmsis_compiler.h</file>
-            <file>$PROJ_DIR$\CMSIS\Include\cmsis_version.h</file>
-            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader.h</file>
-            <file>$PROJ_DIR$\flash_config.h</file>
-            <file>$PROJ_DIR$\Sources\fusemap.h</file>
-            <file>$PROJ_DIR$\Sources\fsl_common.h</file>
-            <file>$PROJ_DIR$\CMSIS\Include\mpu_armv7.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
-            <file>$PROJ_DIR$\Sources\target_config.h</file>
-            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-            <file>$PROJ_DIR$\Sources\microseconds_sysclk.c</file>
-            <file>$PROJ_DIR$\Sources\microseconds.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\iar_intrinsics_common.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader_extra.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-        </outputs>
-        <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 32 10</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader_asm.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 27</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Sources\fsl_common.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 33</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 25</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 56 37 67 43 58 50 47 38 40 64 49 46 34 59 45 41 15 48 52 51 69 35 57 21 13</file>
+                    <file> 28 9 29 13 6 16 15 14 26 18 5 31 46 0 27 2 39 22 11 7 10 60 24 32 33</file>
                 </tool>
             </inputs>
         </file>
@@ -662,17 +141,32 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 12</file>
+                    <file> 59</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 28</file>
+                    <file> 56</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 5 56 37 67 43 58 50 47 38 40 64 49 46 34 59 45 41 15 48 52 51 69 35 57 21 13</file>
+                    <file> 58 28 9 29 13 6 16 15 14 26 18 5 31 46 0 27 2 39 22 11 7 10 60 24 32 33</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\FlashIMXRT1020_EVK_FlexSPI\Exe\FlashIMXRT1020_EVK_FlexSPI.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 37</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 36 45 48 65 68 57 69 59 42 12 21 19</file>
                 </tool>
             </inputs>
         </file>
@@ -681,36 +175,17 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 11</file>
+                    <file> 68</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 18</file>
+                    <file> 67</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 63 35 43 58 50 47 68 44 67 71 49 34 59 64 46 40 53 54 70 36 41 15 48 52 51 69 57 21 3 56 37 38 45 13 5</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Sources\clock_config_MIMXRT.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 20</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 23</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 41 15 48 40 67 43 58 50 47 52 51 69 35 57 21 5 56 37 38 64 49 46 34 59 45 13 55 61</file>
+                    <file> 25 60 13 6 16 15 8 30 29 40 5 46 0 18 31 26 71 4 70 20 2 39 22 11 7 10 24 32 55 28 9 14 27 33 58</file>
                 </tool>
             </inputs>
         </file>
@@ -719,17 +194,351 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 19</file>
+                    <file> 57</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 17</file>
+                    <file> 61</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 64 67 43 58 50 47 49 46 34 59 38 5 56 37 40 45 41 15 48 52 51 69 35 57 21 13 3</file>
+                    <file> 18 29 13 6 16 15 5 31 46 0 14 58 28 9 26 27 2 39 22 11 7 10 60 24 32 33 55</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader_asm.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 65</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Sources\clock_config_MIMXRT.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 45</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 66</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 39 22 26 29 13 6 16 15 11 7 10 60 24 32 58 28 9 14 18 5 31 46 0 27 33 1 23</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 48</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 3</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Sources\hardware_init_MIMXRT.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 42</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 39 22 26 29 13 6 16 15 11 7 10 60 24 32 9 58 28 14 18 5 31 46 0 27 33 55 1 34</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\framework\flash_loader_asm.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 65</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\framework\flash_loader.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 48</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 3</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 71 4 26 29 13 6 16 15 70</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>FlashIMXRT1050_EVK_FlexSPI</name>
+        <outputs>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\Sources\fusemap.h</file>
+            <file>$PROJ_DIR$\devices\fsl_device_registers.h</file>
+            <file>$PROJ_DIR$\flash_config.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\CMSIS\Include\cmsis_compiler.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\iar_intrinsics_common.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+            <file>$PROJ_DIR$\CMSIS\Include\cmsis_version.h</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\Sources\device.h</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tlv.a</file>
+            <file>$PROJ_DIR$\CMSIS\Include\core_cm7.h</file>
+            <file>$PROJ_DIR$\Sources\target_config.h</file>
+            <file>$PROJ_DIR$\CMSIS\Include\mpu_armv7.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$PROJ_DIR$\Sources\fsl_common.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ctype.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\hardware_init_MIMXRT.__cstat.et</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flash_loader.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\fsl_flexspi.__cstat.et</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flash_loader.__cstat.et</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flash_loader_asm.o</file>
+            <file>$PROJ_DIR$\devices\MIMXRT1050\peripherals_pinmux.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+            <file>$PROJ_DIR$\devices\MIMXRT1050\MIMXRT1052.h</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\clock_config_MIMXRT.__cstat.et</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flash_loader.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\List\FlashIMXRT1050_EVK_FlexSPI.map</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\fsl_common.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader_asm.s</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\fsl_common.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\clock_config_MIMXRT.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flexspi_nor_flash.__cstat.et</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\fsl_common.__cstat.et</file>
+            <file>$PROJ_DIR$\devices\MIMXRT1050\MIMXRT1052_features.h</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flexspi_nor_flash.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\microseconds_sysclk.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader_extra.h</file>
+            <file>$PROJ_DIR$\Sources\fsl_common.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\Sources\fsl_flexspi.c</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI.c</file>
+            <file>$PROJ_DIR$\Sources\flexspi_nor_flash.c</file>
+            <file>$PROJ_DIR$\Sources\clock_config_MIMXRT.c</file>
+            <file>$PROJ_DIR$\Sources\flexspi_nor_flash.h</file>
+            <file>$PROJ_DIR$\Sources\fsl_flexspi.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\Sources\hardware_init_MIMXRT.c</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\fsl_flexspi.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.pbd</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\fsl_flexspi.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\clock_config_MIMXRT.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\microseconds_sysclk.o</file>
+            <file>$PROJ_DIR$\Sources\microseconds_sysclk.c</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_OCRAM.icf</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\flexspi_nor_flash.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\microseconds_sysclk.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Exe\FlashIMXRT1050_EVK_FlexSPI.out</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\hardware_init_MIMXRT.xcl</file>
+            <file>$PROJ_DIR$\Sources\microseconds.h</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Obj\hardware_init_MIMXRT.o</file>
+            <file>$PROJ_DIR$\devices\MIMXRT1050\fsl_clock.h</file>
+            <file>$PROJ_DIR$\framework\flash_loader_extra.h</file>
+            <file>$PROJ_DIR$\framework\flash_loader.h</file>
+            <file>$PROJ_DIR$\framework\flash_loader_asm.s</file>
+            <file>$PROJ_DIR$\framework\flash_loader.c</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader_asm.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 35</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 32</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 34</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 40</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 16 3 25 28 12 5 15 14 55</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 76 41</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Sources\fsl_common.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 42</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 47</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 44</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27 8 28 12 5 15 14 13 25 17 4 30 57 0 26 2 38 21 10 6 9 64 23 48 80</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Sources\fsl_flexspi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 68</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 66</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 63 27 8 28 12 5 15 14 13 25 17 4 30 57 0 26 2 38 21 10 6 9 64 23 48 80</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 74</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 54</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 53</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 24 64 12 5 15 14 7 29 28 52 4 57 0 17 30 25 82 3 81 19 2 38 21 10 6 9 23 48 62 27 8 13 26 80 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Sources\flexspi_nor_flash.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 73</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 46</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 49</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 17 28 12 5 15 14 4 30 57 0 13 63 27 8 25 26 2 38 21 10 6 9 64 23 48 80 62</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Sources\clock_config_MIMXRT.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 45</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 39</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 69</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 38 21 25 28 12 5 15 14 10 6 9 64 23 48 63 27 8 13 17 4 30 57 0 26 80 1 22</file>
                 </tool>
             </inputs>
         </file>
@@ -738,51 +547,21 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 30</file>
+                    <file> 79</file>
                 </tool>
                 <tool>
-                    <name>BICOMP</name>
+                    <name>__cstat</name>
                     <file> 31</file>
                 </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 41 15 48 40 67 43 58 50 47 52 51 69 35 57 21 37 5 56 38 64 49 46 34 59 45 13 3 55 22</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 24</file>
-                </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 26</file>
+                    <file> 77</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 53 54 40 67 43 58 50 47 70</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Exe\FlashIMXRT1060_FlexSPI.out</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 10</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 14 20 24 27 11 19 33 12 30 62 42 39</file>
+                    <file> 2 38 21 25 28 12 5 15 14 10 6 9 64 23 48 8 63 27 13 17 4 30 57 0 26 80 62 1 36</file>
                 </tool>
             </inputs>
         </file>
@@ -791,17 +570,359 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 16</file>
+                    <file> 70</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 50</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 29</file>
+                    <file> 75</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 66 71 67 43 58 50 47 49 38 41 15 48 40 52 51 69 35 57 21 60</file>
+                    <file> 78 52 28 12 5 15 14 4 13 2 38 21 25 10 6 9 64 23 48 37</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI\Exe\FlashIMXRT1050_EVK_FlexSPI.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 41</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 72 45 32 35 74 73 42 68 79 11 20 18</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\framework\flash_loader_asm.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 35</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\framework\flash_loader.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 32</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 40</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 82 3 25 28 12 5 15 14 81</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>FlashIMXRT1060_FlexSPI</name>
+        <outputs>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\Sources\fusemap.h</file>
+            <file>$PROJ_DIR$\devices\fsl_device_registers.h</file>
+            <file>$PROJ_DIR$\flash_config.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\CMSIS\Include\cmsis_compiler.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\iar_intrinsics_common.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+            <file>$PROJ_DIR$\CMSIS\Include\cmsis_version.h</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\Sources\device.h</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tlv.a</file>
+            <file>$PROJ_DIR$\CMSIS\Include\core_cm7.h</file>
+            <file>$PROJ_DIR$\Sources\target_config.h</file>
+            <file>$PROJ_DIR$\CMSIS\Include\mpu_armv7.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$PROJ_DIR$\Sources\fsl_common.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ctype.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader_asm.s</file>
+            <file>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$TOOLKIT_DIR$\src\flashloader\framework2\flash_loader_extra.h</file>
+            <file>$PROJ_DIR$\Sources\fsl_common.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\Sources\fsl_flexspi.c</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI.c</file>
+            <file>$PROJ_DIR$\Sources\flexspi_nor_flash.c</file>
+            <file>$PROJ_DIR$\Sources\clock_config_MIMXRT.c</file>
+            <file>$PROJ_DIR$\Sources\flexspi_nor_flash.h</file>
+            <file>$PROJ_DIR$\Sources\fsl_flexspi.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\Sources\hardware_init_MIMXRT.c</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\flexspi_nor_flash.xcl</file>
+            <file>$PROJ_DIR$\devices\MIMXRT1060\MIMXRT1062_features.h</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\flexspi_nor_flash.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\clock_config_MIMXRT.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1050_RAM512K.icf</file>
+            <file>$PROJ_DIR$\Sources\microseconds_sysclk.c</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\fsl_flexspi.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\microseconds_sysclk.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\List\FlashIMXRT1060_FlexSPI.map</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\clock_config_MIMXRT.o</file>
+            <file>$PROJ_DIR$\devices\MIMXRT1060\peripherals_pinmux.h</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\flash_loader.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\fsl_common.xcl</file>
+            <file>$PROJ_DIR$\devices\MIMXRT1060\MIMXRT1062.h</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\flash_loader.xcl</file>
+            <file>$PROJ_DIR$\devices\MIMXRT1060\fsl_clock.h</file>
+            <file>$PROJ_DIR$\Sources\microseconds.h</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\microseconds_sysclk.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\fsl_common.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\hardware_init_MIMXRT.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\flash_loader_asm.o</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\fsl_flexspi.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Exe\FlashIMXRT1060_FlexSPI.out</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\hardware_init_MIMXRT.xcl</file>
+            <file>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Obj\FlashIMXRT1050_EVK_FlexSPI.pbd</file>
+            <file>$PROJ_DIR$\framework\flash_loader_extra.h</file>
+            <file>$PROJ_DIR$\framework\flash_loader.h</file>
+            <file>$PROJ_DIR$\framework\flash_loader_asm.s</file>
+            <file>$PROJ_DIR$\framework\flash_loader.c</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader_asm.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 68</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\src\flashloader\framework2\flash_loader.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 59</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 16 3 25 28 12 5 15 14 35</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 70 56</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Sources\fsl_common.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 66</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 60</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27 8 28 12 5 15 14 13 25 17 4 30 37 0 26 2 61 21 10 6 9 44 23 47 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Sources\fsl_flexspi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 53</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 69</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 43 27 8 28 12 5 15 14 13 25 17 4 30 37 0 26 2 61 21 10 6 9 44 23 47 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\FlashIMXRT1050_EVK_FlexSPI.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 55</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 52</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 24 44 12 5 15 14 7 29 28 34 4 37 0 17 30 25 74 3 73 19 2 61 21 10 6 9 23 47 42 27 8 13 26 63 43</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Sources\flexspi_nor_flash.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 48</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 46</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 17 28 12 5 15 14 4 30 37 0 13 43 27 8 25 26 2 61 21 10 6 9 44 23 47 63 42</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Sources\clock_config_MIMXRT.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 57</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 49</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 61 21 25 28 12 5 15 14 10 6 9 44 23 47 43 27 8 13 17 4 30 37 0 26 63 1 22</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Sources\hardware_init_MIMXRT.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 67</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 71</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 61 21 25 28 12 5 15 14 10 6 9 44 23 47 8 43 27 13 17 4 30 37 0 26 63 42 1 58</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Sources\microseconds_sysclk.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 54</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 65</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 64 34 28 12 5 15 14 4 13 2 61 21 25 10 6 9 44 23 47 31</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\FlashIMXRT1060_FlexSPI\Exe\FlashIMXRT1060_FlexSPI.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 56</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 50 57 59 68 55 48 66 53 67 11 20 18</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\framework\flash_loader_asm.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 68</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\framework\flash_loader.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 59</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 74 3 25 28 12 5 15 14 73</file>
                 </tool>
             </inputs>
         </file>

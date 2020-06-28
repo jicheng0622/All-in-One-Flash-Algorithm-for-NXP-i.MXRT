@@ -350,7 +350,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$TOOLKIT_DIR$\src\flashloader\framework2\</state>
+                    <state>$PROJ_DIR$\framework</state>
                     <state>$PROJ_DIR$\</state>
                     <state>$PROJ_DIR$\Sources</state>
                     <state>$PROJ_DIR$\CMSIS\Include</state>
@@ -1416,7 +1416,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$TOOLKIT_DIR$\src\flashloader\framework2\</state>
+                    <state>$PROJ_DIR$\framework</state>
                     <state>$PROJ_DIR$\</state>
                     <state>$PROJ_DIR$\Sources</state>
                     <state>$PROJ_DIR$\CMSIS\Include</state>
@@ -2482,7 +2482,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$TOOLKIT_DIR$\src\flashloader\framework2\</state>
+                    <state>$PROJ_DIR$\framework</state>
                     <state>$PROJ_DIR$\</state>
                     <state>$PROJ_DIR$\Sources</state>
                     <state>$PROJ_DIR$\CMSIS\Include</state>
@@ -3202,10 +3202,10 @@
     <group>
         <name>Framework</name>
         <file>
-            <name>$EW_DIR$\arm\src\flashloader\framework2\flash_loader.c</name>
+            <name>$PROJ_DIR$\framework\flash_loader.c</name>
         </file>
         <file>
-            <name>$EW_DIR$\arm\src\flashloader\framework2\flash_loader_asm.s</name>
+            <name>$PROJ_DIR$\framework\flash_loader_asm.s</name>
         </file>
     </group>
     <file>
