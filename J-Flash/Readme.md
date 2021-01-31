@@ -4,7 +4,7 @@
 
 ## 测试平台
 
-*开发板：*i.MXRT1021_EVK, i.MXRT1050_EVK
+*Board:* i.MXRT1021_EVK, i.MXRT1050_EVK
 
 *SPI Flash:* IS25LP64, GD25Q32, S26KS512(HyperFlash)
 
@@ -18,13 +18,7 @@
 
 **注意：Keil下的FLM算法文件与J-Flash下的FLM算法文件不能通用**
 
-（3）将两个Flash算法文件分别对应的拷贝到J-link安装目录下\SEGGER\JLink_V690\Devices\NXP\iMXRT102x和\SEGGER\JLink_V690\Devices\NXP\iMXRT105x文件夹里如下图，下图仅以Keil版本的FLM文件为例：
-
-**注意：如果是Segger版本的算法文件应该是elf文件**
-
-<img src="Figures/RT102x_JlinkPath.JPG" alt="RT102x_JlinkPath" style="zoom:67%;" />
-
-<img src="Figures/RT105x_JlinkPath.JPG" alt="RT105x_JlinkPath" style="zoom:67%;" />
+（3）将Flash算法文件分别对应地拷贝到J-link安装目录下\SEGGER\JLink_V690\Devices\NXP\iMXRT102x和\SEGGER\JLink_V690\Devices\NXP\iMXRT105x文件夹里;
 
 （4）回到J-link安装目录\SEGGER\JLink_V690路径下，用文本编辑工具（e.g Notepad++）打开JLinkDevices.xml文件，将RT1020和RT1050的flash算法路径信息添加到该文件里如下图（在Jlink_v6.90的xml文件里默认有RT1050的路径信息，只需要参考下图修改flash算法的名字即可，而RT1020的路径信息没有，它包含在Jlink的DLL动态链接库里，所以需要完整添加下图中关于RT1020的所有信息以覆盖DLL里的内容），为了方便大家拷贝添加信息我也把Jlink_v6.90里修改过的JLinkDevices.xml源文件一并上传到github代码仓库里（路径All-in-One-Flash-Algorithm-for-RT1050-RT1020/J-Flash）；
 
