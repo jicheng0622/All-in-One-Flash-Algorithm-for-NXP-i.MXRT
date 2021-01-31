@@ -1,0 +1,48 @@
+<DataBase>
+  <!--                 -->
+  <!-- NXP (iMXRT102x) -->
+  <!--                 -->  
+  <Device>
+    <ChipInfo Vendor="NXP" Name="MIMXRT1021xxx4A" WorkRAMAddr="0x20000000" WorkRAMSize="0x00010000" Core="JLINK_CORE_CORTEX_M7" />
+    <FlashBankInfo Name="QSPI Flash" BaseAddr="0x60000000" MaxSize="0x0400000" Loader="Devices/NXP/iMXRT102x/FlashIMXRT1020_SPINor.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" />
+  </Device>  
+  <Device>
+    <ChipInfo Vendor="NXP" Name="MIMXRT1021CAF4A" WorkRAMAddr="0x20000000" WorkRAMSize="0x00010000" Core="JLINK_CORE_CORTEX_M7" />
+    <FlashBankInfo Name="QSPI Flash" BaseAddr="0x60000000" MaxSize="0x0400000" Loader="Devices/NXP/iMXRT102x/FlashIMXRT1020_SPINor.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" />
+  </Device>  
+  <Device>
+    <ChipInfo Vendor="NXP" Name="MIMXRT1021CAG4A" WorkRAMAddr="0x20000000" WorkRAMSize="0x00010000" Core="JLINK_CORE_CORTEX_M7" />
+    <FlashBankInfo Name="QSPI Flash" BaseAddr="0x60000000" MaxSize="0x0400000" Loader="Devices/NXP/iMXRT102x/FlashIMXRT1020_SPINor.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" />
+  </Device>  
+  <Device>
+    <ChipInfo Vendor="NXP" Name="MIMXRT1021xxx5A" WorkRAMAddr="0x20000000" WorkRAMSize="0x00010000" Core="JLINK_CORE_CORTEX_M7" />
+    <FlashBankInfo Name="QSPI Flash" BaseAddr="0x60000000" MaxSize="0x00400000" Loader="Devices/NXP/iMXRT102x/FlashIMXRT1020_SPINor.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" />
+  </Device>  
+  <Device>
+    <ChipInfo Vendor="NXP" Name="MIMXRT1021DAF5A" WorkRAMAddr="0x20000000" WorkRAMSize="0x00010000" Core="JLINK_CORE_CORTEX_M7" />
+    <FlashBankInfo Name="QSPI Flash" BaseAddr="0x60000000" MaxSize="0x00400000" Loader="Devices/NXP/iMXRT102x/FlashIMXRT1020_SPINor.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" />
+  </Device>  
+    <Device>
+    <ChipInfo Vendor="NXP" Name="MIMXRT1021DAG5A" WorkRAMAddr="0x20000000" WorkRAMSize="0x00010000" Core="JLINK_CORE_CORTEX_M7" />
+    <FlashBankInfo Name="QSPI Flash" BaseAddr="0x60000000" MaxSize="0x00400000" Loader="Devices/NXP/iMXRT102x/FlashIMXRT1020_SPINor.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" />
+  </Device> 
+  <!--                 -->
+  <!-- NXP (iMXRT105x) -->
+  <!--                 -->
+  <Device>
+    <ChipInfo Vendor="NXP" Name="MIMXRT1051xxxxA" WorkRAMAddr="0x20000000" WorkRAMSize="0x00020000" Core="JLINK_CORE_CORTEX_M7" Aliases="MCIMXRT1051; MIMXRT1051xxx5A; MIMXRT1051CVL5A; MIMXRT1051xxx6A; MIMXRT1051DVL6A" />
+    <FlashBankInfo Name="QSPI Flash" BaseAddr="0x60000000" MaxSize="0x00800000" Loader="Devices/NXP/iMXRT105x/FlashIMXRT1050_SPINor.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="NXP" Name="MIMXRT1051xxxxB" WorkRAMAddr="0x20000000" WorkRAMSize="0x00020000" Core="JLINK_CORE_CORTEX_M7" Aliases="MIMXRT1051xxx5B; MIMXRT1051CVL5B; MIMXRT1051xxx6B; MIMXRT1051DVL6B" />
+    <FlashBankInfo Name="QSPI Flash" BaseAddr="0x60000000" MaxSize="0x00800000" Loader="Devices/NXP/iMXRT105x/FlashIMXRT1050_SPINor.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="NXP" Name="MIMXRT1052xxxxA" WorkRAMAddr="0x20000000" WorkRAMSize="0x00020000" Core="JLINK_CORE_CORTEX_M7" Aliases="MCIMXRT1052; MIMXRT1052xxx5A; MIMXRT1052CVL5A; MIMXRT1052xxx6A; MIMXRT1052DVL6A" />
+    <FlashBankInfo Name="QSPI Flash" BaseAddr="0x60000000" MaxSize="0x00800000" Loader="Devices/NXP/iMXRT105x/FlashIMXRT1050_SPINor.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="NXP" Name="MIMXRT1052xxxxB" WorkRAMAddr="0x20000000" WorkRAMSize="0x00020000" Core="JLINK_CORE_CORTEX_M7" Aliases="MIMXRT1052xxx5B; MIMXRT1052CVL5B; MIMXRT1052xxx6B; MIMXRT1052DVL6B" />
+    <FlashBankInfo Name="QSPI Flash" BaseAddr="0x60000000" MaxSize="0x00800000" Loader="Devices/NXP/iMXRT105x/FlashIMXRT1050_SPINor.elf" LoaderType="FLASH_ALGO_TYPE_OPEN" />
+  </Device>
+</DataBase>

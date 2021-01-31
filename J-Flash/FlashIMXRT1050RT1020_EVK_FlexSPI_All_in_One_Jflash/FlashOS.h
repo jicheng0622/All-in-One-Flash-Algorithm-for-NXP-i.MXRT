@@ -21,7 +21,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+#define U8  unsigned char
+#define U16 unsigned short
+#define U32 unsigned long
+
+#define I8  signed char
+#define I16 signed short
+#define I32 signed long
+	
 #define VERS       1           // Interface Version 1.01
 
 #define UNKNOWN    0           // Unknown
@@ -31,47 +38,39 @@
 #define EXT32BIT   4           // External Flash Device on 32-bit Bus
 #define EXTSPI     5           // External Flash Device on SPI
 
-#define SECTOR_NUM 512         // Max Number of Sector Items
-#define PAGE_MAX   65536       // Max Page Size for Programming
+#define MAX_NUM_SECTORS (512)      // Max. number of sectors, must not be modified.
+#define ALGO_VERSION    (0x0101)   // Algo version, must not be modified.
 
-struct FlashSectors  {
-  unsigned long   szSector;    // Sector Size in Bytes
-  unsigned long AddrSector;    // Address of Sector
+struct SECTOR_INFO  {
+  U32 SectorSize;       // Sector Size in bytes
+  U32 SectorStartAddr;  // Start address of the sector area (relative to the "BaseAddr" of the flash)
 };
 
 #define SECTOR_END 0xFFFFFFFF, 0xFFFFFFFF
 
-struct FlashDevice  {
-   unsigned short     Vers;    // Version Number and Architecture
-   char       DevName[128];    // Device Name and Description
-   unsigned short  DevType;    // Device Type: ONCHIP, EXT8BIT, EXT16BIT, ...
-   unsigned long    DevAdr;    // Default Device Start Address
-   unsigned long     szDev;    // Total Size of Device
-   unsigned long    szPage;    // Programming Page Size
-   unsigned long       Res;    // Reserved for future Extension
-   unsigned char  valEmpty;    // Content of Erased Memory
-
-   unsigned long    toProg;    // Time Out of Program Page Function
-   unsigned long   toErase;    // Time Out of Erase Sector Function
-
-   struct FlashSectors sectors[SECTOR_NUM];
+struct FlashDevice {
+   U16 AlgoVer;       // Algo version number
+   U8  Name[128];     // Flash device name
+   U16 Type;          // Flash device type
+   U32 BaseAddr;      // Flash base address
+   U32 TotalSize;     // Total flash device size in Bytes (256 KB)
+   U32 PageSize;      // Page Size (number of bytes that will be passed to ProgramPage(). MinAlig is 8 byte
+   U32 Reserved;      // Reserved, should be 0
+   U8  ErasedVal;     // Flash erased value
+   U32 TimeoutProg;   // Program page timeout in ms; 0: use default timeout
+   // el xxxx Multi Sector program: 
+   U32 TimeoutErase;  // Erase sector timeout in ms 0: Use default timeout
+   // el xxxx Multi Sector erase: 
+   struct SECTOR_INFO SectorInfo[MAX_NUM_SECTORS]; // Flash sector layout definition
 };
 
-#define FLASH_DRV_VERS (0x0100+VERS)   // Driver Version, do not modify!
-
-// Flash Programming Functions (Called by FlashOS)
-extern          int  Init        (unsigned long adr,   // Initialize Flash
-                                  unsigned long clk,
-                                  unsigned long fnc);
-extern          int  UnInit      (unsigned long fnc);  // De-initialize Flash
-extern          int  BlankCheck  (unsigned long adr,   // Blank Check
-                                  unsigned long sz,
-                                  unsigned char pat);
-extern          int  EraseChip   (void);               // Erase complete Device
-extern          int  EraseSector (unsigned long adr);  // Erase Sector Function
-extern          int  ProgramPage (unsigned long adr,   // Program Page Function
-                                  unsigned long sz,
-                                  unsigned char *buf);
-extern unsigned long Verify      (unsigned long adr,   // Verify Function
-                                  unsigned long sz,
-                                  unsigned char *buf);
+//
+// Flash module functions
+//
+extern int Init                (U32 Addr,       U32 Freq,         U32 Func       );
+extern int UnInit              (U32 Func                                         );
+extern int BlankCheck          (U32 Addr,       U32 NumBytes,     U8  BlankData  );
+extern int EraseChip           (void                                             );
+extern int EraseSector         (U32 SectorAddr                                   );
+extern int ProgramPage         (U32 DestAddr,   U32 NumBytes,     U8  *pSrcBuff  );
+extern U32 Verify              (U32 Addr,       U32 NumBytes,     U8  *pSrcBuff  );

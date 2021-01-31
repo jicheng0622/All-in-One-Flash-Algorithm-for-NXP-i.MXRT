@@ -847,7 +847,7 @@ status_t flexspi_init(uint32_t instance, flexspi_mem_config_t *config)
         mcr0 |= FLEXSPI_MCR0_IPGRANTWAIT_MASK | FLEXSPI_MCR0_AHBGRANTWAIT_MASK;
         // Configure Read sample clock source
         mcr0 |= FLEXSPI_MCR0_RXCLKSRC(config->readSampleClkSrc);
-	    // Half Speed Serial Flash access for stability
+				// Half Speed Serial Flash access for stability
         mcr0 |= FLEXSPI_MCR0_HSEN_MASK;
         base->MCR0 = mcr0;
 

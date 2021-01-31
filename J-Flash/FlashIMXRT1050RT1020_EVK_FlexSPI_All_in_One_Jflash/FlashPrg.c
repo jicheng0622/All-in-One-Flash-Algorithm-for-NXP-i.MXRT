@@ -26,10 +26,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
+#include "FlashOS.h"
 #include "flexspi_nor_flash.h"
 
+#define PAGE_SIZE_SHIFT              (8)   // Smallest amount of data that can be programmed. <PageSize> = 2 ^ Shift. Shift = 2 => <PageSize> = 2^2 = 4 bytes
+#define SECTOR_SIZE_SHIFT            (12)   // Flashes with uniform sectors only. <SectorSize> = 2 ^ Shift. Shift = 12 => <SectorSize> = 2 ^ 12 = 4096 bytes
+
 #ifndef DISABLE_WDOG
-  #define DISABLE_WDOG                 1
+  #define DISABLE_WDOG                1
 #endif
 
 /** private data **/
@@ -79,7 +83,6 @@ __attribute__((aligned(4))) const flexspi_nor_config_t config_block ;/*= {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };*/
 static uint32_t fspi_instance;
-
 extern void clock_setup(void);
 extern uint32_t SystemCoreClock;
 
@@ -110,10 +113,29 @@ void Disable_Watchdog(void)
   RTWDOG->CS = (uint32_t) ((RTWDOG->CS) & ~RTWDOG_CS_EN_MASK) | RTWDOG_CS_UPDATE_MASK;
 }
 
-int Init (unsigned long adr, unsigned long clk, unsigned long fnc)
-{
+/*********************************************************************
+*
+*       Init
+*
+*  Function description
+*    Handles the initialization of the flash module.
+*
+*  Parameters
+*    Addr: Flash base address
+*    Freq: Clock frequency in Hz
+*    Func: Specifies the action followed by Init() (e.g.: 1 - Erase, 2 - Program, 3 - Verify / Read)
+*
+*  Return value 
+*    0 O.K.
+*    1 Error
+*/
+int Init(U32 Addr, U32 Freq, U32 Func) {
   static status_t status;  
   serial_nor_config_option_t option;
+	
+	(void)Addr;
+  (void)Freq;
+  (void)Func;
 	
 #if DISABLE_WDOG  
   Disable_Watchdog();
@@ -135,17 +157,11 @@ int Init (unsigned long adr, unsigned long clk, unsigned long fnc)
 	uint8_t * Opt0 = (uint8_t *)0x20201000;
 	uint8_t * Opt1 = (uint8_t *)0x20201008;
 	
-	if(Opt0[3]=='O'
-		 &&Opt0[2]=='p'
-	   &&Opt0[1]=='t'
-	   &&Opt0[0]=='0')
+	if(Opt0[3]=='O'&&Opt0[2]=='p'&&Opt0[1]=='t'&&Opt0[0]=='0')
 	{
 		option.option0.U = *((uint32_t *)0x20201004);
 	}
-  if(Opt1[3]=='O'
-		 &&Opt1[2]=='p'
-	   &&Opt1[1]=='t'
-	   &&Opt1[0]=='1')
+  if(Opt1[3]=='O'&&Opt1[2]=='p'&&Opt1[1]=='t'&&Opt1[0]=='1')
 	{
 		option.option1.U = *((uint32_t *)0x2020100C);
 	}
@@ -158,11 +174,11 @@ int Init (unsigned long adr, unsigned long clk, unsigned long fnc)
 	
   clock_setup();
 	
-	if(0x60000000 == (adr&0xF0000000UL))//For RT1060/RT1050/RT1020/RT1010
+	if(0x60000000 == (Addr&0xF0000000UL))//For RT1060/RT1050/RT1020/RT1010
   {
     fspi_instance = 0;
   } 
-  else if(0x70000000 == (adr&0xF0000000UL))//For RT1064
+  else if(0x70000000 == (Addr&0xF0000000UL))//For RT1064
   {
     fspi_instance = 2;
   }
@@ -176,60 +192,146 @@ int Init (unsigned long adr, unsigned long clk, unsigned long fnc)
 	
   return (status);
 }
+                           
+/*********************************************************************
+*
+*       UnInit
+*
+*  Function description
+*    Handles the de-initialization of the flash module.
+*    It is called once per flash programming step (Erase, Program, Verify)
+*
+*  Parameters
+*    Func  Caller type (e.g.: 1 - Erase, 2 - Program, 3 - Verify)
+*
+*  Return value
+*    == 0  O.K.
+*    == 1  Error
+*
+*  Notes
+*    (1) This function is mandatory.
+*    (2) Use "noinline" attribute to make sure that function is never inlined and label not accidentally removed by linker from ELF file.
+*/
+int UnInit(U32 Func){
+	
+	  flexspi_clear_cache(fspi_instance);
 
-                                  
-/*
- *  De-Initialize Flash Programming Functions
- *    Parameter:      fnc:  Function Code (1 - Erase, 2 - Program, 3 - Verify)
- *    Return Value:   0 - OK,  1 - Failed
- */
-
-int UnInit (unsigned long fnc)
-{
+    flexspi_clear_sequence_pointer(fspi_instance);
+	
     return (0);
 }
 
+/*********************************************************************
+*
+*       EraseSector
+*
+*  Function description
+*    Erases one flash sector.
+*
+*  Parameters
+*    SectorAddr  Absolute address of the sector to be erased
+*
+*  Return value
+*    == 0  O.K.
+*    == 1  Error
+*
+*  Notes
+*    (1) This function is mandatory.
+*    (2) Use "noinline" attribute to make sure that function is never inlined and label not accidentally removed by linker from ELF file.
+*/
+int EraseSector(U32 SectorAddr) {
+  static status_t status;
+  SectorAddr &= 0x0FFFFFFF;
+    
+  status = flexspi_nor_flash_erase_sector(fspi_instance, (flexspi_nor_config_t *) &config_block, SectorAddr);
+    
+  return status;
 
-unsigned long Verify (unsigned long adr, unsigned long sz, unsigned char *buf)
-{
-    if(!memcmp(buf, (void*)adr, sz))
-    {
-        return (adr+sz);                                  // Finished without Errors
+}
+/*********************************************************************
+*
+*       EraseChip
+*
+*  Function description
+*    Erases the entire flash.
+*
+*  Return value
+*    == 0  O.K.
+*    == 1  Error
+*
+*  Notes
+*    (1) This function is optional. If not present, J-Link will always use EraseSector() for erasing.
+*    (2) Use "noinline" attribute to make sure that function is never inlined and label not accidentally removed by linker from ELF file.
+*/
+int EraseChip(void) {
+  static status_t status;
+
+  status = flexspi_nor_flash_erase_all(fspi_instance, (flexspi_nor_config_t *) &config_block);
+    
+  return (status);
+  
+}
+/*********************************************************************
+*
+*       ProgramPage
+*
+*  Function description
+*    Programs one flash page.
+*
+*  Parameters
+*    DestAddr  Address to start programming on
+*    NumBytes  Number of bytes to program. Guaranteed to be == <FlashDevice.PageSize>
+*    pSrcBuff  Pointer to data to be programmed
+*
+*  Return value
+*    == 0  O.K.
+*    == 1  Error
+*
+*  Notes
+*    (1) This function is mandatory.
+*    (2) Use "noinline" attribute to make sure that function is never inlined and label not accidentally removed by linker from ELF file.
+*/
+int ProgramPage(U32 DestAddr, U32 NumBytes, U8 *pSrcBuff) {
+  static status_t status;
+  DestAddr &= 0x0FFFFFFF;
+    
+  status = flexspi_nor_flash_page_program(fspi_instance, (flexspi_nor_config_t *) &config_block, DestAddr, (const uint32_t *)pSrcBuff);
+
+  return (status);
+}
+
+/*********************************************************************
+*
+*       BlankCheck
+*
+*  Function description
+*    Checks if a memory region is blank
+*
+*  Parameters
+*    Addr       Address to start checking
+*    NumBytes   Number of bytes to be checked
+*    BlankData  Blank (erased) value of flash (Most flashes have 0xFF, some have 0x00, some do not have a defined erased value)
+*
+*  Return value
+*    == 0  O.K., blank
+*    == 1  O.K., *not* blank
+*     < 0  Error
+*
+*  Notes
+*    (1) This function is optional. If not present, the J-Link software will assume that erased state of a sector can be determined via normal memory-mapped readback of sector.
+*    (2) Use "noinline" attribute to make sure that function is never inlined and label not accidentally removed by linker from ELF file.
+*/
+int BlankCheck(U32 Addr, U32 NumBytes, U8 BlankData) {
+  volatile U8* pData;
+  //
+  // Simply read data from flash and compare against <BlankData>
+  //
+  
+  pData = (volatile U8*)Addr;
+  do {
+    if (*pData++ != BlankData) {
+      return 1;
     }
-    else
-    {
-        return 0;
-    }
-}
-
-int EraseChip (void)
-{
-    static status_t status;
-
-    status = flexspi_nor_flash_erase_all(fspi_instance, (flexspi_nor_config_t *) &config_block);
-    
-    return (status);
-}
-
-
-
-int EraseSector (unsigned long adr)
-{
-	  static status_t status;
-    adr &= 0x0FFFFFFF;
-    
-    status = flexspi_nor_flash_erase_sector(fspi_instance, (flexspi_nor_config_t *) &config_block, adr);
-    
-    return status;
-}
-
-
-int ProgramPage (unsigned long adr, unsigned long sz, unsigned char *buf)
-{
-	  static status_t status;
-    adr &= 0x0FFFFFFF;
-    
-    status = flexspi_nor_flash_page_program(fspi_instance, (flexspi_nor_config_t *) &config_block, adr, (const uint32_t *)buf);
-
-    return (status);
+  } while (--NumBytes);
+  return 0;
 }

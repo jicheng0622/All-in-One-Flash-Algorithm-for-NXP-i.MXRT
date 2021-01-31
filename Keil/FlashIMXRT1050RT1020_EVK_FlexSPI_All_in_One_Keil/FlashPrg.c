@@ -214,7 +214,7 @@ int Init(U32 Addr, U32 Freq, U32 Func) {
 */
 int UnInit(U32 Func){
 	
-	  flexspi_clear_cache(fspi_instance);
+	flexspi_clear_cache(fspi_instance);
 
     flexspi_clear_sequence_pointer(fspi_instance);
 	
