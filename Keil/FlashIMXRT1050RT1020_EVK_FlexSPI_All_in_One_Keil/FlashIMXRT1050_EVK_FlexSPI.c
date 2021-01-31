@@ -138,7 +138,7 @@ uint32_t FlashInit(void *base_of_flash, uint32_t image_size,
   
   /* Consider HyperFlash is default memory in EVK_RT1050 */
 #if defined(MIMXRT1052_SERIES) 
-  if(2 <= ((SRC->SBMR1>>8) & 0x7))
+  if(2 == ((SRC->SBMR1>>8) & 0x7))
   {
     option.option0.U = 0xc0233009;//HperflashV1.8v
   }

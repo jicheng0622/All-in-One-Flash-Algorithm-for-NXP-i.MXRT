@@ -1609,12 +1609,8 @@ status_t parse_sfdp(uint32_t instance,
             break;
         }
 
-        /* 
-           Keep LoopbackInternally mode to avoid the case dqs pad is not initliazed 
-           in SerialDownload bootmode or another case the pin is used on customer's board 
-        */
-        config->memConfig.readSampleClkSrc = kFlexSPIReadSampleClk_LoopbackInternally;
-        
+        config->memConfig.readSampleClkSrc = kFlexSPIReadSampleClk_LoopbackFromDqsPad;
+
         // Write Enable
         config->memConfig.lookupTable[4 * NOR_CMD_LUT_SEQ_IDX_WRITEENABLE] =
             FLEXSPI_LUT_SEQ(CMD_SDR, FLEXSPI_1PAD, kSerialNorCmd_WriteEnable, STOP, FLEXSPI_1PAD, 0);

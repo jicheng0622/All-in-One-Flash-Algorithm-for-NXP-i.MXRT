@@ -10,7 +10,7 @@
 
 *Tool:* J-Link_v9, Keil_v5.31
 
-*SDK:* SDK_2.6.1
+SDK: SDK_2.6.1
 
 ## 使用方法：
 

@@ -24,7 +24,6 @@
 /***********************************************************************/
 
 #include "FlashOS.h"        // FlashOS Structures
-#include "FlashParams.h"    // General flash parameters
 ////RT1050_EVK HyperFlash IS26KS512S
 //struct FlashDevice const FlashDevice  =  {
 //   FLASH_DRV_VERS,               // Driver Version, do not modify!
@@ -44,7 +43,7 @@
 //};
 
 struct FlashDevice const FlashDevice  =  {
-   FLASH_DRV_VERS,               // Driver Version, do not modify!
+   ALGO_VERSION,                // Driver Version, do not modify!
 #ifdef CPU_MIMXRT1052CVL5B
 	"MIMXRT1050_SPINor_AllinOne", // Device Name
 #elif defined(CPU_MIMXRT1021DAG5A)
@@ -53,18 +52,15 @@ struct FlashDevice const FlashDevice  =  {
 	 "Unkown part flash algo",
 #endif
    EXTSPI,                       // Device Type
-   FLASH_BASE_ADDR,              // Device Start Address
-   FLASH_SIZE,                   // Device Size (4MB)
-   FLASH_PAGE_SIZE,              // Programming Page Size
+   0x60000000,                   // Device Start Address
+   0x00800000U,                  // Device Size (8MB)
+   256,                          // Programming Page Size
    0,                            // Reserved, must be 0
    0xFF,                         // Initial Content of Erased Memory
-   1000,                         // Program Page Timeout 1000 mSec
-   3000,                         // Erase Sector Timeout 3000 mSec
+   2000,                         // Program Page Timeout 1000 mSec
+   6000,                         // Erase Sector Timeout 3000 mSec
 
 // Specify Size and Address of Sectors
-   FLASH_SECTORE_SIZE, 0x000000, // Sector size and start offset of this sector group
+   0x1000, 0x000000, // Sector size and start offset of this sector group
    SECTOR_END
 };
-
-
-
