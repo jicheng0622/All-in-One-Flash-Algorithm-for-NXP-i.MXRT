@@ -1609,7 +1609,7 @@ status_t parse_sfdp(uint32_t instance,
             break;
         }
 
-        config->memConfig.readSampleClkSrc = kFlexSPIReadSampleClk_LoopbackFromDqsPad;
+        //config->memConfig.readSampleClkSrc = kFlexSPIReadSampleClk_LoopbackFromDqsPad;//remove this way to keep Erase/Program/Read stability
 
         // Write Enable
         config->memConfig.lookupTable[4 * NOR_CMD_LUT_SEQ_IDX_WRITEENABLE] =
