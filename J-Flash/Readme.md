@@ -8,21 +8,27 @@
 
 *SPI Flash:* IS25LP64, GD25Q32, S26KS512(HyperFlash)
 
-*Tool:* J-Link_v9, J-Flash_v6.90, Keil_v5.31
+*Tool:* J-Link_v9, J-Flash_v6.90, Keil_v5.31, Segger Embeded Studio_v5.4
 
 ## 使用方法：
 
-（1）从我的[Github repo](https://github.com/jicheng0622/All-in-One-Flash-Algorithm-for-RT1050-RT1020)下载AllinOne Flash Algorithm for J-Flash代码工程并在Keil环境下分别选择FlashRT1020_SPINor和FlashRT1050_SPINor编译通过，此时可以在工程根目录下生成FlashIMXRT1020_SPINor.FLM和FlashIMXRT1050_SPINor.FLM算法文件（一个是针对RT1020系列，一个是针对RT1050系列）；
+（1）在AllinOne Flash Algorithm for J-Flash项目中我创建了两个算法工程，其中一个为Keil版本的CMSIS标准flash算法(生成.FLM算法文件)，另外一个为Segger公司提供的Segger Embeded Studio版本的快速Flash算法（.elf算法文件），J-Flash两种算法都可以支持，只是道理大家都明白，毕竟J-Flash一套都是Segger自家亲儿子，Segger提供的那一套快速Flash算法模板，我移植过去之后亲测速度非常快，尤其是Verify过程（唰的一下，飞一般的感觉~），它使用了CRC校验的方法而非标准CMSIS的回读比对方式校验，效率提高了几倍不止，只是CRC校验方法Segger只提供了Segger Embeded Studio版本编译的静态库（Segger好心机啊。。。），所以我不得不单独创建了一个Embeded Studio算法工程；
+
+（2）从我的[Github repo](https://github.com/jicheng0622/All-in-One-Flash-Algorithm-for-RT1050-RT1020)下载AllinOne Flash Algorithm for J-Flash两个代码工程（Keil版本和Segger Embeded Studio版本），看个人喜好选择其中一种（个人推荐后者，Embeded Studio虽然是后来之秀，但是我一直很盲目的崇拜和相信Segger，用起来的确很舒爽），选择分别选择FlashRT1020_SPINor和FlashRT1050_SPINor编译通过，此时可以在工程目录下生成FlashIMXRT1020_SPINor.FLM和FlashIMXRT1050_SPINor.FLM算法文件（Keil版本，路径根目录）或者FlashIMXRT1020_SPINor.elf和FlashIMXRT1050_SPINor.elf算法文件（Segger版本，路径\Output\FlashIMXRT1050_SPINor\Exe）；
 
 **注意：Keil下的FLM算法文件与J-Flash下的FLM算法文件不能通用**
 
-（2）将两个Flash算法文件分别对应的拷贝到J-link安装目录下\SEGGER\JLink_V690\Devices\NXP\iMXRT102x和\SEGGER\JLink_V690\Devices\NXP\iMXRT105x文件夹里如下图：
+（3）将两个Flash算法文件分别对应的拷贝到J-link安装目录下\SEGGER\JLink_V690\Devices\NXP\iMXRT102x和\SEGGER\JLink_V690\Devices\NXP\iMXRT105x文件夹里如下图，下图仅以Keil版本的FLM文件为例：
+
+**注意：如果是Segger版本的算法文件应该是elf文件**
 
 <img src="Figures/RT102x_JlinkPath.JPG" alt="RT102x_JlinkPath" style="zoom:67%;" />
 
 <img src="Figures/RT105x_JlinkPath.JPG" alt="RT105x_JlinkPath" style="zoom:67%;" />
 
-（3）回到J-link安装目录\SEGGER\JLink_V690路径下，用文本编辑工具（e.g Notepad++）打开JLinkDevices.xml文件，将RT1020和RT1050的flash算法路径信息添加到该文件里如下图（在Jlink_v6.90的xml文件里默认有RT1050的路径信息，只需要参考下图修改flash算法的名字即可，而RT1020的路径信息没有，它包含在Jlink的DLL动态链接库里，所以需要完整添加下图中关于RT1020的所有信息以覆盖DLL里的内容），为了方便大家拷贝添加信息我也把Jlink_v6.90里修改过的JLinkDevices.xml源文件一并上传到github代码仓库里（路径All-in-One-Flash-Algorithm-for-RT1050-RT1020/J-Flash）；
+（4）回到J-link安装目录\SEGGER\JLink_V690路径下，用文本编辑工具（e.g Notepad++）打开JLinkDevices.xml文件，将RT1020和RT1050的flash算法路径信息添加到该文件里如下图（在Jlink_v6.90的xml文件里默认有RT1050的路径信息，只需要参考下图修改flash算法的名字即可，而RT1020的路径信息没有，它包含在Jlink的DLL动态链接库里，所以需要完整添加下图中关于RT1020的所有信息以覆盖DLL里的内容），为了方便大家拷贝添加信息我也把Jlink_v6.90里修改过的JLinkDevices.xml源文件一并上传到github代码仓库里（路径All-in-One-Flash-Algorithm-for-RT1050-RT1020/J-Flash）；
+
+**重要提示：如果是Segger版本的话，记得把下图中的所有FlashIMXRT1050_SPINor.FLM和FlashIMXRT1020_SPINor.FLM后缀都改为FlashIMXRT1050_SPINor.elf和FlashIMXRT1020_SPINor.elf**
 
 <img src="Figures/jlinkdevice_RT1020.png" alt="image-20210102174332114" style="zoom:67%;" />
 
