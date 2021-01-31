@@ -14,7 +14,7 @@
 
 （1）在AllinOne Flash Algorithm for J-Flash项目中我创建了两个算法工程，其中一个为Keil版本的CMSIS标准flash算法(生成.FLM算法文件)，另外一个为Segger公司提供的Segger Embeded Studio版本的快速Flash算法（.elf算法文件），J-Flash两种算法都可以支持，只是道理大家都明白，毕竟J-Flash一套都是Segger自家亲儿子，Segger提供的那一套快速Flash算法模板，我移植过去之后亲测速度非常快，尤其是Verify过程（唰的一下，飞一般的感觉~），它使用了CRC校验的方法而非标准CMSIS的回读比对方式校验，效率提高了几倍不止，只是CRC校验方法Segger只提供了Segger Embeded Studio版本编译的静态库（Segger好心机啊。。。），所以我不得不单独创建了一个Embeded Studio算法工程；
 
-（2）从我的[Github repo](https://github.com/jicheng0622/All-in-One-Flash-Algorithm-for-RT1050-RT1020)下载AllinOne Flash Algorithm for J-Flash两个代码工程（Keil版本和Segger Embeded Studio版本），看个人喜好选择其中一种（个人推荐后者，Embeded Studio虽然是后来之秀，但是我一直很盲目的崇拜和相信Segger，用起来的确很舒爽），选择分别选择FlashRT1020_SPINor和FlashRT1050_SPINor编译通过，此时可以在工程目录下生成FlashIMXRT1020_SPINor.FLM和FlashIMXRT1050_SPINor.FLM算法文件（Keil版本，路径根目录）或者FlashIMXRT1020_SPINor.elf和FlashIMXRT1050_SPINor.elf算法文件（Segger版本，路径\Output\FlashIMXRT1050_SPINor\Exe）；
+（2）从我的[Github repo](https://github.com/jicheng0622/All-in-One-Flash-Algorithm-for-RT1050-RT1020)下载AllinOne Flash Algorithm for J-Flash两个代码工程（Keil版本和Segger Embeded Studio版本），看个人喜好选择其中一种（个人推荐后者，Embeded Studio虽然是后来之秀，但是我一直很盲目的崇拜和相信Segger，用起来的确很舒爽），选择分别选择FlashRT1020_SPINor和FlashRT1050_SPINor编译通过，此时可以在工程目录下生成FlashIMXRT1020_SPINor.FLM和FlashIMXRT1050_SPINor.FLM算法文件（Keil版本，路径根目录）或者FlashIMXRT1020_SPINor.elf和FlashIMXRT1050_SPINor.elf算法文件（Segger版本，路径\Output\FlashIMXRT1050_SPINor\Exe）,可能有人会觉着还要安装Segger Embeded Studio重新编译一遍挺麻烦，我就好人做到底，预编译好的elf文件我放到\FlashIMXRT1050RT1020_EVK_FlexSPI_All_in_One_Jflash_FastAlgo\JLinkDeviceXMLEntry路径下了，可以直接使用；
 
 **注意：Keil下的FLM算法文件与J-Flash下的FLM算法文件不能通用**
 
