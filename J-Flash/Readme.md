@@ -28,7 +28,7 @@
 
 <img src="Figures/jlinkdevice_RT1050.png" alt="image-20210102194923129" style="zoom:67%;" />
 
-（4）打开J-Flash工具创建新Project，在Target Device列表里选择RT1021或者RT1052，另外要注意的是i.MXRT系列默认的调试端口为SWD而非JTAG(使能JTAG调试需要提前烧eFuse配置才可以)。工程创建完毕之后，我们上述新添加的Flash烧写算法实际上已经被J-Flash先load进去了，此时如果是官方RT1021/RT1052_EVK默认板载Flash的话，我们把待烧写的bin/hex/srec文件拖到J-Flash工具里之后就可以点击菜单栏Target->Connect或者直接点击Target->Production Programming触发J-Link烧写image到目标芯片上了。
+（5）打开J-Flash工具创建新Project，在Target Device列表里选择RT1021或者RT1052，另外要注意的是i.MXRT系列默认的调试端口为SWD而非JTAG(使能JTAG调试需要提前烧eFuse配置才可以)。工程创建完毕之后，我们上述新添加的Flash烧写算法实际上已经被J-Flash先load进去了，此时如果是官方RT1021/RT1052_EVK默认板载Flash的话，我们把待烧写的bin/hex/srec文件拖到J-Flash工具里之后就可以点击菜单栏Target->Connect或者直接点击Target->Production Programming触发J-Link烧写image到目标芯片上了。
 
 ### 如何给J-Flash Flash烧写算法传入命令配置字
 
