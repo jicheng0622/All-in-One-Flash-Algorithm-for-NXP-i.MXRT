@@ -72,25 +72,25 @@ RT1050/RT1020的SPI Flash烧写算法一直以来都是各自为政，不同的I
 
 i.MXRT系列在Internal Boot模式下正常启动时，默认配置会在POR_B复位管脚上升沿的时刻从Boot CFG GPIO管脚获取到电平状态并装载到SRC_SBMR1寄存器，然后BOOT_ROM会以该寄存器的值来决定外部启动设备的类型和相关的启动配置，比如Flexspi接口启动还是SEMC接口启动还是SDHC启动，还有Flexspi是Norflash启动还是Nandflash启动，以及启动时的时钟频率和使用的哪组管脚配置，具体请查询i.MXRT RM手册SystemBoot章节（注意不同RT系列，它的BOOT_CFG对应的IO管脚可能是不一样的，下图是RT1060的）。
 
-<img src="/Figures/SRC_SBMR1.png" alt="SRC_SBMR1" style="zoom:67%;" />
+<img src="Figures/SRC_SBMR1.png" alt="SRC_SBMR1" style="zoom:67%;" />
 
 <img src="Figures/GPIOBoot.png" alt="GPIOBoot" style="zoom:67%;" />
 
 不过在实际应用中，有些系统设计对IO利用率要求较高，由于可用IO数量不够而使用到BOOT_CFG相关的IO管脚同时外部电路又没办法保证在刚上电时POR_B上升沿时刻这些管脚的电平状态是可控的，这种情况下如果继续使用Internal Boot模式下的默认配置则可能会由于启动配置装载的IO状态不是预期的进而导致MCU启动失败（可通过dump SRC_SBMR1寄存器看到BOOT_CFG信号不正常非预期）。针对这种情况，i.MXRT在Internal Boot模式下提供了从内部eFuse熔丝位获取启动配置的方式，即MCU上电复位后不再从BOOT_CFG IO管脚电平获取启动配置而是使用内部eFuse的配置，具体见RM手册SystemBoot章节如下图，当内部熔丝位BT_FUSE_SEL写成1之后（出厂默认为0），GPIO状态不再决定启动配置而是由eFuse熔丝内部的BOOT_CFG1和BOOT_CFG2位决定。
 
-<img src="/Figures/BT_FUSE_SEL.png" alt="BT_FUSE_SEL" style="zoom:67%;" />
+<img src="Figures/BT_FUSE_SEL.png" alt="BT_FUSE_SEL" style="zoom:67%;" />
 
-<img src="/Figures/Boot_eFuse.png" alt="Boot_eFuse" style="zoom:50%;" />
+<img src="Figures/Boot_eFuse.png" alt="Boot_eFuse" style="zoom:50%;" />
 
 从上述解释说明我们知道了通过烧写内部eFuse熔丝位BT_FUSE_SEL和BOOT_CFG1和2可以决定RT的启动配置，那这两个熔丝位的位置具体在哪里以及如何写入。从RT的RM手册里Fusemap章节找到boot fusemap table如下，可以看到BOOT_CFG1和2位于eFuse地址0x450的[15:0]位，BT_FUSE_SEL位于地址0x460的bit4位，这些eFuse位出厂默认均为0，如果用户的外部Flash是我们平时最常用的QSPI Flash的话，则从下图eFuse位说明可以看到BOOT_CFG1和2位不需要再写入（保持0即可），我们只需要把BT_FUSE_SEL写1即可（注意eFuse只能从0写成1，而且只能写一次）。
 
-<img src="/Figures/BootFuseMap.png" alt="BootFuseMap" style="zoom:70%;" />
+<img src="Figures/BootFuseMap.png" alt="BootFuseMap" style="zoom:70%;" />
 
 本项目最新的Flash烧写算法新加入了对eFuse熔丝位的写入支持，一旦使能了该功能后，用户在给RT下载更新程序的同时也会写入eFuse，对用户来说是无感的，最大程度减少用户额外的操作，不过对eFuse的写入大家一定要谨慎，因为eFuse一旦从0写成1就无法再逆向回去了 （这也是叫做熔丝位的原因）。如下图1，加入了eFuse的写入，不过默认是不生效的，用户如果想使能eFuse的烧写的话，需要参照本文前面提到的IAR中传入--Opt的方法给IAR的flashloader传入--BT_FUSE这个参数，如下图2。
 
-<img src="/Figures/BT_FUSE.png" alt="BT_FUSE" style="zoom:70%;" />
+<img src="Figures/BT_FUSE.png" alt="BT_FUSE" style="zoom:70%;" />
 
-<img src="/Figures/BT_FUSE_EN.png" alt="BT_FUSE_EN" style="zoom:70%;" />
+<img src="Figures/BT_FUSE_EN.png" alt="BT_FUSE_EN" style="zoom:70%;" />
 
 对于上述的eFuse写入代码，这里简单解释一下，由于eFuse是一块独立的物理存储空间不在CPU内部的4G可寻址空间范围内，要对其进行操作需要借助于OCOTP控制器，而eFuse的地址和OCOTP里的地址有个映射关系即eFuse address = OCOTP index * 0x10 + 0x400，所以上图中我们传入OCOTP的参数0x06对应的是eFuse空间中的0x460，也就是BT_FUSE_SEL熔丝位所在的物理空间地址。如果用户想要操作其他eFuse空间，则可以参考该代码中的API用法自行添加和修改，但是一定要注意对eFuse的操作是一次性的。
 
