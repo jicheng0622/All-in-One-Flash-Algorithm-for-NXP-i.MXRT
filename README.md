@@ -12,3 +12,5 @@ History(Big Changes):
 2021.01.31--Add Segger Embeded Studio version's Fast Flash Algorithm to support J-Flash, it is strongly suggested to use this high speed version for large image file programming ;
 
 2022.10.21--Change repository name from All-in-One-Flash-Algorithm-for-RT1050-RT1020 to All-in-One-Flash-Algorithm-for-i.MXRT for more RT family support
+
+2022.10.28--Add eFuse write support in flash algorithm
