@@ -1,0 +1,44 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints">
+  <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
+ </Breakpoints>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
+ </FrameBufferWindow>
+ <Memory1/>
+ <Memory2/>
+ <Memory3/>
+ <Memory4/>
+ <Project>
+  <ProjectSessionItem path="Flashloader"/>
+  <ProjectSessionItem path="Flashloader;FlashIMXRT10xx_SPINor"/>
+  <ProjectSessionItem path="Flashloader;FlashIMXRT10xx_SPINor;Src"/>
+ </Project>
+ <Register1/>
+ <Register2/>
+ <Register3/>
+ <Register4/>
+ <Threads>
+  <ThreadsWindow showLists=""/>
+ </Threads>
+ <TraceWindow>
+  <Trace enabled="Yes"/>
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never"/>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never"/>
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never"/>
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never"/>
+ </Watch4>
+ <Files/>
+ <EMStudioWindow activeProject="FlashIMXRT10xx_SPINor" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="FlashIMXRT1050_SPINor" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/_Work/NXP/MCU/i.MXRT/Tools/IAR_Keil_FlashAlgorithm/All-in-One-Flash-Algorithm-for-NXP-i.MXRT/J-Flash/FlashIMXRT10xx_FlexSPI_All_in_One_Jflash_FastAlgo/Src/drivers" debugSearchPath="" autoConnectCapabilities="3199"/>
+</session>
